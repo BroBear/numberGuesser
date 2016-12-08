@@ -1,0 +1,125 @@
+/*whole page*/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*header*/
+header {
+  background-color:#404041;
+  height:75px;
+  color:white;
+  display: block;
+  text-align:center;
+  padding: 0 25px;
+
+}
+.num {
+  color:#ED458B;
+  font-weight: bold;
+  margin-top: 8px;
+  padding: 15px 0;
+  font-size: 30;
+
+}
+.g{
+  color:#EDE7E8;
+  font-weight: 300;
+}
+/*Input Field*/
+
+#guessInput{
+  width: 300px;
+  height: 20px;
+  display: block;
+  margin: 20px auto
+}
+#entMin {
+  width: 200px;
+  height: 20px;
+  display: block;
+  margin: 20px auto
+}
+
+#entMax {
+  width: 200px;
+  height: 20px;
+  display: block;
+  margin: 20px auto
+
+}
+/*buttons*/
+section {
+  text-align: center;
+  margin: auto;
+
+}
+
+button {
+  background-color: #929497;
+  color: #FFFFFF;
+  border-radius: 25px;
+  height:25px;
+  width: 150px;
+ }
+button:hover{
+  background-color: #EB008B;
+  color: #FFFFFF;
+
+}
+
+button:disabled {
+  background-color: #D0D2D3;
+  color: #FFFFFF;
+}
+#entMin {
+  width: 200px;
+  height: 20px;
+  display: block;
+  margin: 20px auto
+}
+
+#entMax {
+  width: 200px;
+  height: 20px;
+  display: block;
+  margin: 20px auto
+
+}
+
+
+/*result container*/
+
+div {
+  width: 300px;
+  height: 200px;
+  margin: 10px auto;
+
+ }
+ .box{
+   text-align:center;
+   color: #EB008B;
+   font-size:30vh;
+
+
+
+ }
+
+.was {
+  text-align: center;
+  padding: 10;
+}
+
+.result {
+  text-align:center;
+  color: black;
+  padding: 10;
+
+}
+
+/* reset button*/
+.reset{
+  vertical-align: baseline;
+  display: block;
+  margin:  auto;
+  width: 300px;
+}
