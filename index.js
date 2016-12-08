@@ -57,7 +57,6 @@ guessButton.addEventListener('click', function () {
     return alert("Must be a Numerical Value");
 
   }
-
   resetButton.disabled = false;
   box.innerText = userNumber;
   if(userNumber === randomNum) {

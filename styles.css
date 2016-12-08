@@ -17,7 +17,7 @@ header {
   color:#ED458B;
   font-weight: bold;
   margin-top: 8px;
-  padding: 15px 0;
+  padding: 20px 0;
   font-size: 30;
 
 }
@@ -60,6 +60,9 @@ button {
   border-radius: 25px;
   height:25px;
   width: 150px;
+  margin-right: 10px;
+  margin-top: 10px;
+
  }
 button:hover{
   background-color: #EB008B;
@@ -122,4 +125,22 @@ div {
   display: block;
   margin:  auto;
   width: 300px;
+}
+/* media query changes button size in mobile*/
+@media screen and (max-width: 325px){
+  button {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 325px){
+  .reset {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 325px){
+  #guessInput {
+    width: 80%;
+  }
 }
