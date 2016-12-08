@@ -29,14 +29,14 @@ guessButton.addEventListener('click', function () {
   }
   resetButton.disabled = false;
   box.innerText = userNumber;
-  //this if statement says that if the user guess and random guess are equal then call the increaseMax function (which increase the guess range by 10, then it calls the decreaseMin function to decrease the minimum range by 10
+  //this if statement says that if the user guess and random guess are equal then call the increaseMax function (which increase the guess range by 10, then it calls the decreaseMin function to decrease the minimum range by 10)
   if(userNumber === randomNum) {
     document.getElementById('entMax').value = increaseMax();
     document.getElementById('entMin').value = decreaseMin();
   //this calls the randomNumberGen function to regenerate the random number
     randomNum = randomNumberGen();
   //this gets the guessInput placeholder to read Enter a ...
-    document.getElementById('guessInput').placeholder = "Enter a number between " + getMinimum() + " - " + getMaximum();
+    document.getElementById('guessInput').placeholder = "Range increased enter a number between " + getMinimum() + " - " + getMaximum();
   //this resets the guessInput value to nothing
     document.getElementById('guessInput').value = "";
   //this logs the new random generated number
@@ -51,6 +51,7 @@ guessButton.addEventListener('click', function () {
 
 rangeButton.addEventListener('click', function () {
   randomNum=randomNumberGen();
+  document.getElementById('guessInput').placeholder = "Range increased enter a number between " + getMinimum() + " - " + getMaximum();
   console.log(randomNum);
 })
 
