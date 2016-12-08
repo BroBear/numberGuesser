@@ -9,38 +9,8 @@ var clearButton = document.querySelector('.clearInput');
 var resetButton = document.querySelector('.reset');
 var rangeButton = document.querySelector('.range');
 
-function decreaseMin () {
-  newMin = getMinimum()-10;
-  min = newMin;
-  return min;
-}
 
-function increaseMax() {
-  newMax = getMaximum()+10;
-  max = newMax;
-  return max;
-}
-function randomNumberGen () {
-  minimum = getMinimum();
-  maximum = getMaximum();
-  return Math.floor(Math.random() * (maximum-minimum)) + minimum;
-}
-function getMinimum () {
-  if ((document.getElementById('entMin').value)==="") {
-    return 1;
-    }
-    else {
-    return Number(document.getElementById('entMin').value)}
-}
-function getMaximum () {
-  if ((document.getElementById('entMax').value)==="") {
-    return 100;
-  }
-  else {
-    return Number(document.getElementById('entMax').value) }
-  }
-
-//loads number to compare//
+//loads number to compare and disables the clear and reset buttons//
 window.onload = function (){
   console.log(randomNum);
   clearButton.disabled = true;
@@ -59,12 +29,17 @@ guessButton.addEventListener('click', function () {
   }
   resetButton.disabled = false;
   box.innerText = userNumber;
+  //this if statement says that if the user guess and random guess are equal then call the increaseMax function (which increase the guess range by 10, then it calls the decreaseMin function to decrease the minimum range by 10
   if(userNumber === randomNum) {
     document.getElementById('entMax').value = increaseMax();
     document.getElementById('entMin').value = decreaseMin();
+  //this calls the randomNumberGen function to regenerate the random number
     randomNum = randomNumberGen();
+  //this gets the guessInput placeholder to read Enter a ...
     document.getElementById('guessInput').placeholder = "Enter a number between " + getMinimum() + " - " + getMaximum();
+  //this resets the guessInput value to nothing
     document.getElementById('guessInput').value = "";
+  //this logs the new random generated number
     console.log(randomNum);
     answer.innerText = "BOOM";
   } else if(userNumber > randomNum) {
@@ -112,3 +87,40 @@ resetButton.addEventListener('click', function () {
   }
 
 });
+
+//function that generates our random number
+function randomNumberGen () {
+  minimum = getMinimum();
+  maximum = getMaximum();
+  return Math.floor(Math.random() * (maximum-minimum)) + minimum;
+}
+
+//function that establishes the minimum value to be compared
+function getMinimum () {
+  if ((document.getElementById('entMin').value)==="") {
+    return 1;
+    }
+    else {
+    return Number(document.getElementById('entMin').value)}
+}
+//function that establishes the maximum value to be compared
+function getMaximum () {
+  if ((document.getElementById('entMax').value)==="") {
+    return 100;
+  }
+  else {
+    return Number(document.getElementById('entMax').value) }
+  }
+  //function to increase our minimum guess range by 10
+  function decreaseMin () {
+    newMin = getMinimum()-10;
+    min = newMin;
+    return min;
+  }
+
+  //function to increase our maximum guess range by 10
+  function increaseMax() {
+    newMax = getMaximum()+10;
+    max = newMax;
+    return max;
+  }

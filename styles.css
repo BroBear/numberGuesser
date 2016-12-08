@@ -74,6 +74,7 @@ button:disabled {
   background-color: #D0D2D3;
   color: #FFFFFF;
 }
+/*range input field
 #entMin {
   width: 200px;
   height: 20px;
@@ -86,7 +87,6 @@ button:disabled {
   height: 20px;
   display: block;
   margin: 20px auto
-
 }
 
 
@@ -96,16 +96,12 @@ div {
   width: 300px;
   height: 200px;
   margin: 10px auto;
-
- }
+}
  .box{
    text-align:center;
    color: #EB008B;
-   font-size:30vh;
-
-
-
- }
+   font-size:28vh;
+}
 
 .was {
   text-align: center;
@@ -136,6 +132,7 @@ div {
 @media screen and (max-width: 325px){
   .reset {
     width: 80%;
+    padding-bottom: 10px;
   }
 }
 
